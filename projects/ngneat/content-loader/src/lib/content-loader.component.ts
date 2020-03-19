@@ -56,7 +56,7 @@ export class ContentLoaderComponent implements OnInit, OnChanges {
     this.animationValues = this.rtl ? this.rtlAnimation : this.defautlAnimation;
 
     if (this.baseUrl === '' && !this.ignoreBaseUrl && isPlatformBrowser(this.platformId)) {
-      this.baseUrl = window.location.pathname;
+      this.baseUrl = window.location.pathname + window.location.search;
     }
 
     this.setFillStyle();
